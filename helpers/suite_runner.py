@@ -20,8 +20,13 @@ def gather_env_vars():
 
 
 def clear_existing_screenshots():
-    if os.path.exists('./tmp/screenshots') is True:
+    if os.path.exists('./tmp/screenshots'):
         shutil.rmtree('./tmp/screenshots')
+
+
+def open_screenshots_folder():
+    if os.path.exists('./tmp/screenshots'):
+        subprocess.call(['open', './tmp/screenshots/'])
 
 
 test_suite = sys.argv[1]
@@ -32,6 +37,7 @@ def suite_runner():
         clear_existing_screenshots()
         gather_env_vars()
         subprocess.run(['python3', '-m', 'pytest', 'testcases/', '--junitxml=junitreport.xml'])
+        open_screenshots_folder()
     else:
         gather_env_vars()
         subprocess.run(['python3', '-m', 'pytest', 'testcases/' + test_suite, '--junitxml=junitreport.xml'])
