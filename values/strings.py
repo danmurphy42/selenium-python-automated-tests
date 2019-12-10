@@ -4,7 +4,7 @@ load_dotenv()
 
 
 class Urls:
-    editor_url = f"https://editor-url.{os.getenv('SANDBOX')}.voxmedia.com"
+    editor_url = f"https://editor-url.{os.getenv('SANDBOX')}.testeditor.com"
 
 
 class LoginCredentials:

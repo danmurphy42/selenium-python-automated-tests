@@ -40,7 +40,7 @@ class CreateNewStory(unittest.TestCase):
         published_entry.story_items_displayed(
             "Article Headline",
             "Article Dek",
-            "This is the first line of a story published by Vox Media."
+            "This is the first line of a story."
         )
 
     def tearDown(self):
