@@ -11,6 +11,6 @@ pytest-fixture-config==1.7.0
 python-dotenv==0.10.3
 selenium==3.141.0
 six==1.13.0
-urllib3==1.25.7
+urllib3==1.26.5
 wcwidth==0.1.7
 zipp==0.6.0
